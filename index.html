@@ -768,7 +768,7 @@
           <div class="col-lg-10 col-md-9">
             <div class="card shadow">
               <div class="card-body p-0">
-                <div class="owl-carousel owl-theme owl-nav-outer-half owl-dot-round p-0"
+                <div class="owl-carousel owl-theme owl-nav-outer-half owl-dot-round p-0 owl-testimonial"
                   data-options='{"autoplay":true,"loop":true,"items":1,"dots":false,"margin":10,"animateOut":"fadeOut","animateIn":"fadeIn","autoplaySpeed":3000,"autoplayHoverPause":true,"responsive":{"0":{"nav":false,"dots":true},"995":{"nav":true}}}'>
                   <div class="row no-gutters">
                     <div class="col-lg-7 min-vh-md-25 min-vh-90">
@@ -1102,30 +1102,30 @@
     new PureCounter();
 
   </script>
-    <script>
-      $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-          autoplay: true,
-          loop: true,
-          items: 1,
-          dots: false,
-          margin: 10,
-          animateOut: 'fadeOut',
-          animateIn: 'fadeIn',
-          autoplaySpeed: 3000,
-          autoplayHoverPause: true,
-          responsive: {
-            0: {
-              nav: false,
-              dots: true
-            },
-            995: {
-              nav: true
-            }
+  <script>
+   $(document).ready(function () {
+      $('.owl-testimonial').owlCarousel({
+        autoplay: true,
+        loop: true,
+        items: 1,
+        dots: false,
+        margin: 10,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            nav: false,
+            dots: true
+          },
+          995: {
+            nav: true
           }
-        });
+        }
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>
