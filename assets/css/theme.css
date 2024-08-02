@@ -20742,6 +20742,7 @@ a.text-white:hover {
         display: none;
     }
 }
+
 .image-container {
     position: relative;
     display: inline-block;
@@ -20764,6 +20765,20 @@ a.text-white:hover {
     z-index: 0;
     position: relative;
     border: 10px solid #006957;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        margin-top: 0px;
+        height: 270px;
+        left: 3%;
+    }
+    .image-container img {
+        width: 70%;
+        height: 100%;
+        padding:10px;
+        top: 0px;
+    }
 }
 
 .top-left-strip, .bottom-right-strip {
