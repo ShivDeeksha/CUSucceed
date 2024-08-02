@@ -209,7 +209,7 @@
                   </div>
                   <div class="p-3 align-items-center">
                     <div class="row justify-content-center">
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-12 text-center ">
+                      <div class="col-xl-12  col-lg-12 col-md-12 col-12 text-center ">
                         <h6 class=" text-capitalize mb-0 fs-xl-2 fs-sm-4 heading-underline heading-underline-2 mb-4 ">
                           <strong class="text-primary ">Campus</strong> Recruitment Training
                         </h6>
@@ -251,9 +251,13 @@
                     <div class="bottom-right-strip"></div> -->
                   </div>
                   <div class="p-3">
-                    <h6 class="text-capitalize mb-0 fs-xl-2 fs-sm-3 heading-underline heading-underline-2 mb-4">
-                      <strong class="text-primary">Faculty</strong> Development Programs
-                    </h6>
+                    <div class="row justify-content-center">
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-center ">
+                        <h6 class=" text-capitalize mb-0 fs-xl-2 fs-sm-4 heading-underline heading-underline-2 mb-4 ">
+                          <strong class="text-primary ">Campus</strong> Recruitment Training
+                        </h6>
+                      </div>
+                    </div>
                     <p>Faculty development programs enrich educators by providing them with cutting-edge teaching
                       methodologies, seamless technology integration, and continuous avenues for professional growth,
                       ultimately elevating the overall academic quality and effectiveness of the institution.
@@ -288,9 +292,13 @@
                     <div class="bottom-right-strip"></div> -->
                   </div>
                   <div class="p-3">
-                    <h6 class="text-capitalize mb-0 fs-xl-2 fs-sm-3 heading-underline heading-underline-2 mb-4">
-                      <strong class="text-primary">Corporate</strong> Training
-                    </h6>
+                    <div class="row justify-content-center">
+                      <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-center ">
+                        <h6 class=" text-capitalize mb-0 fs-xl-2 fs-sm-4 heading-underline heading-underline-2 mb-4 ">
+                          <strong class="text-primary ">Campus</strong> Recruitment Training
+                        </h6>
+                      </div>
+                    </div>
                     <p>Corporate training sharpens employees' skills, fostering a culture of adaptability and
                       continuous
                       improvement. It enhances productivity, aligns workforce capabilities with organizational
@@ -941,22 +949,22 @@
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="assets/js/theme.js"></script>
   <script src="assets/js/owl.carousel.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/lib/is/is.min.js"></script>
   <script src="assets/lib/stickyfilljs/stickyfill.min.js"></script>
   <script src="assets/lib/sticky-kit/sticky-kit.min.js"></script>
-  <script src="assets/lib/owl-carousel/owl.carousel.min.js"></script>
+  <!-- <script src="assets/lib/owl-carousel/owl.carousel.min.js"></script> -->
   <script src="assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
   <!-- <script src="assets/lib/isotope-packery/packery-mode.pkgd.min.js"></script> -->
   <script src="assets/lib/semantic-ui-accordion/accordion.min.js"></script>
   <script src="assets/lib/semantic-ui-transition/transition.min.js"></script>
   <script src="assets/lib/fancybox/jquery.fancybox.min.js"></script>
-  <script src="assets/js/theme.js"></script>
   <script src="assets/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/waypoints/noframework.waypoints.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -1025,23 +1033,24 @@
       const cards = document.querySelectorAll('.mycard');
 
       const observer = new IntersectionObserver(entries => {
-        entries.forEach((entry, index) => {
+        let allVisible = false;
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 0); // Delay each card by 200ms multiplied by its index
+            allVisible = true;
             observer.unobserve(entry.target);
           }
         });
+        if (allVisible) {
+          cards.forEach(card => {
+            card.classList.add('visible');
+          });
+        }
       }, { threshold: 0 });
 
       cards.forEach(card => {
         observer.observe(card);
       });
     });
-
-
-
   </script>
   <!-- Owl Carousel JS -->
   <script>
