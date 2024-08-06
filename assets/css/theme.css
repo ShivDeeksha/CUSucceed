@@ -20848,12 +20848,25 @@ a.text-white:hover {
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:39%;
+    left: 20%;
+    
+    width: 60%;
+    height: 25%;
     /* Adjust the height as needed */
-    background-color: #00803a83;
+    background-color: #00803ad2;
+    /* Green color with some transparency */
+    z-index: 0;
+}
+.overlay2 {
+    position: absolute;
+    top:37%;
+    left: 19%;
+    
+    width: 62%;
+    height: 30%;
+    /* Adjust the height as needed */
+    background-color: #00803a7b;
     /* Green color with some transparency */
     z-index: 0;
 }
