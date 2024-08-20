@@ -9839,13 +9839,13 @@ button.bg-dark:hover {
 }
 
 .shadow {
-    -webkit-box-shadow: 0 11px 26px rgba(82, 95, 128, .08) !important;
-    box-shadow: 0 11px 26px rgba(82, 95, 128, .08) !important
+    -webkit-box-shadow: 0 11px 26px rgba(82, 128, 107, 0.08) !important;
+    box-shadow: 0 11px 16px rgba(28, 155, 102, 0.174) !important
 }
 
 .shadow-lg {
-    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, .175) !important;
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .175) !important
+    -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.175) !important;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.175) !important
 }
 
 .shadow-none {
@@ -16120,7 +16120,7 @@ label {
 
 .btn-raven-primary {
     color: #05676b;
-    background: rgba(31, 85, 222, .08);
+    background: rgba(31, 222, 66, 0.08);
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
@@ -16132,6 +16132,25 @@ label {
     background: #05676b !important;
     -webkit-box-shadow: 0 7px 15px rgba(31, 85, 222, .26);
     box-shadow: 0 7px 15px rgba(31, 85, 222, .26);
+    -webkit-transform: translateY(-.125rem);
+    -ms-transform: translateY(-.125rem);
+    transform: translateY(-.125rem)
+}
+
+.btn-raven-primary2 {
+    color: #05676b;
+    background: rgba(255, 255, 255, 0.595);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.btn-raven-primary2:focus,
+.btn-raven-primary2:hover {
+    color: #05676b;
+    background: #ffffff !important;
+    -webkit-box-shadow: 0 7px 15px rgba(31, 222, 165, 0.26);
+    box-shadow: 0 7px 15px rgba(31, 222, 155, 0.26);
     -webkit-transform: translateY(-.125rem);
     -ms-transform: translateY(-.125rem);
     transform: translateY(-.125rem)
@@ -16409,7 +16428,7 @@ label {
     position: relative;
     width: 3.25rem;
     height: 3.25rem;
-    background: rgba(0, 201, 167, .08);
+    background: rgba(255, 255, 255, 0.689);
     border-radius: 50%;
     color: #236f60;
     text-align: center;
@@ -17754,6 +17773,22 @@ th {
     position: absolute;
     width: 90%;
     min-height: 90%;
+    top: 5%;
+    left: 5%;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    will-change: transform, opacity, filter;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    z-index: 0
+}
+
+.bg-holder2 {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
     top: 5%;
     left: 5%;
     background-size: contain;
@@ -20503,7 +20538,8 @@ a.text-white:hover {
     background: #fff;
     /* Optional: for better visibility */
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #59d7a7;
+    box-shadow: 0 0 10px rgba(103, 237, 206, 0.203);
     /* Optional: for better visibility */
 }
 
@@ -20561,10 +20597,19 @@ a.text-white:hover {
     padding: 30px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px #3fe8752e;
     text-align: center;
     transition: transform 0.3s ease;
     justify-content: center;
+    background-color: rgb(237, 253, 247);
+    background-image: radial-gradient(at 88% 40%,
+            rgb(237, 253, 247) 0px,
+            transparent 85%),
+        radial-gradient(at 49% 30%, rgb(245, 255, 251) 0px, transparent 95%),
+        radial-gradient(at 14% 26%, rgb(237, 253, 248) 0px, transparent 85%),
+        radial-gradient(at 0% 64%, rgba(3, 141, 111, 0.815) 0px, transparent 85%),
+        radial-gradient(at 41% 94%, rgb(173, 255, 233) 0px, transparent 85%),
+        radial-gradient(at 100% 99%, rgb(36, 255, 164) 0px, transparent 85%);
 }
 
 .stats-item:hover {
@@ -20755,9 +20800,9 @@ a.text-white:hover {
     position: relative;
     display: inline-block;
     padding: 2%;
-    height: 250px;
+    height: 260px;
     justify-content: center;
-    margin-top: -90px;
+    margin-top: -50px;
     width: 100%;
     overflow: hidden;
 }
@@ -20787,10 +20832,10 @@ a.text-white:hover {
 }
 
 .image-container2 img {
-    width: 74%;
+    width: 65%;
     height: 100%;
     padding: 20px;
-    left: 10%;
+    left: 3%;
     top: -3%;
     border-radius: 50%;
     object-fit: cover;
@@ -20801,18 +20846,22 @@ a.text-white:hover {
 
 
 @media (max-width: 768px) {
-    .image-container {
-        margin-top: 0px;
-        height: 270px;
-        left: 3%;
+    .image-container2 {
+        margin-top: -30%;
+        height: 100%;
+        /* left: %; */
     }
 
-    .image-container img {
+    .image-container2 img {
         width: 70%;
         height: 100%;
         padding: 10px;
         top: 0px;
     }
+}
+
+.my-serv {
+    margin-top: -12% !important;
 }
 
 .top-left-strip,
@@ -20848,9 +20897,9 @@ a.text-white:hover {
 
 .overlay {
     position: absolute;
-    top:39%;
+    top: 39%;
     left: 20%;
-    
+
     width: 60%;
     height: 25%;
     /* Adjust the height as needed */
@@ -20858,11 +20907,12 @@ a.text-white:hover {
     /* Green color with some transparency */
     z-index: 0;
 }
+
 .overlay2 {
     position: absolute;
-    top:37%;
+    top: 37%;
     left: 19%;
-    
+
     width: 62%;
     height: 30%;
     /* Adjust the height as needed */
@@ -20970,12 +21020,14 @@ a.text-white:hover {
     position: relative;
     width: 90%;
 }
+
 @media (max-width: 768px) {
     .campus-card-container {
         width: 50%;
         margin-bottom: 30%;
     }
 }
+
 .campus-cards-top {
     width: 100%;
     height: 170px;
@@ -21152,7 +21204,7 @@ a.text-white:hover {
     gap: 1rem;
     margin: 2%;
     padding: 1rem;
-    width: 19rem;
+    width: 100%;
     background-color: rgb(237, 253, 247);
     background-image: radial-gradient(at 88% 40%,
             rgb(237, 253, 247) 0px,
@@ -21172,7 +21224,7 @@ a.text-white:hover {
     pointer-events: none;
 
     position: absolute;
-    z-index: -10;
+    z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -21198,7 +21250,7 @@ a.text-white:hover {
     transform-origin: left;
 
     width: 200%;
-    height: 12rem;
+    height: 15rem;
     background-image: linear-gradient(0deg,
             hsla(0, 0%, 100%, 0) 0%,
             hsl(142, 95%, 60%) 40%,
@@ -21286,4 +21338,202 @@ a.text-white:hover {
     border: 0;
     border-radius: 9999px;
     box-shadow: inset 0 -2px 25px -4px var(--white);
+}
+
+
+
+/* From Uiverse.io by dylanharriscameron */
+.gap-card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 14px;
+    padding: 7%;
+    z-index: 4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    background-color: #ffffff;
+}
+
+.gap-bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 190px;
+    height: 240px;
+    z-index: 2;
+    background: rgba(255, 255, 255, .95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+.gap-blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 4s infinite linear;
+    transform: translate(-50%, -50%);
+}
+
+.gap-card img {
+    width: 100% !important;
+    margin-top: 0px;
+    z-index: inherit;
+    padding: 10%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    /* Optional: adds rounded corners to the image */
+}
+
+.gap-card p {
+    margin-top: -10%;
+    /* Adds space between the image and the text */
+    font-size: 1.2em;
+    /* Adjust text size as needed */
+    text-align: center;
+    /* Centers the text below the image */
+    color: #333;
+    z-index: inherit;
+    /* Adjust text color as needed */
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+.bg-grad {
+    background-color: rgb(237, 253, 247);
+    background-image: radial-gradient(at 88% 40%,
+            rgb(237, 253, 247) 0px,
+            transparent 85%),
+        radial-gradient(at 49% 30%, rgb(237, 253, 247) 0px, transparent 85%),
+        radial-gradient(at 14% 26%, rgb(237, 253, 248) 0px, transparent 85%),
+        radial-gradient(at 0% 64%, rgb(3, 141, 111) 0px, transparent 85%),
+        radial-gradient(at 41% 94%, rgb(173, 255, 233) 0px, transparent 85%),
+        radial-gradient(at 100% 99%, rgb(36, 255, 164) 0px, transparent 85%);
+}
+
+.stat-bg {
+    background-image: url("../img/shapes/ellipse-4.png");
+    background-size: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.responsive-video {
+    width: 100%;
+    height: 90%;
+    max-width: 100%;
+    justify-self: center;
+    object-fit: cover;
+    margin-left: 0 !important;
+    /* border-radius: 8px; */
+    /* Optional: add some border radius if needed */
+    border-color: #fff;
+}
+
+/* Optional: Make sure it looks good on small screens */
+@media (max-width: 767.98px) {
+    .responsive-video {
+        width: 100%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 12807.98px) {
+    .responsive-video {
+        width: 100%;
+        height: 90%;
+    }
+}
+
+.card_box {
+    width: 100%;
+    border-radius: 20px;
+    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    transition: all .3s;
+    overflow: visible;
+}
+
+.card_box:hover {
+    transform: scale(0.98);
+    /* Slightly reduced scale for subtle effect */
+}
+
+.card_box span {
+    position: absolute;
+    overflow: visible;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_box span::before {
+    content: 'Best Selling';
+    position: absolute;
+    width: 150%;
+    height: 50px;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    overflow: visible;
+}
+
+.card_box span::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    z-index: -1;
+    box-shadow: 140px -140px #cc3f47;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    overflow: visible;
 }
